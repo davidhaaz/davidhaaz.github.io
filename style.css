@@ -1,0 +1,221 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f4f3ef;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 0.5px solid #e0ded8;
+  padding: 2rem 2rem 2.25rem;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1917;
+  letter-spacing: -0.01em;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #a8a69e;
+  font-size: 18px;
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: color 0.15s;
+}
+.close-btn:hover { color: #1a1917; }
+
+.divider {
+  border: none;
+  border-top: 0.5px solid #e8e6e0;
+  margin: 14px 0 22px;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b6963;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.email-input-row {
+  display: flex;
+  align-items: stretch;
+  border: 0.5px solid #d6d4ce;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.email-input-row:focus-within {
+  border-color: #9b9690;
+  box-shadow: 0 0 0 3px rgba(155,150,144,0.12);
+}
+
+.email-input-row input {
+  flex: 0 0 180px;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  height: 40px;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: #1a1917;
+  background: #fff;
+}
+.email-input-row input::placeholder {
+  color: #c2bfb8;
+  font-style: italic;
+}
+
+.domain-suffix {
+  display: flex;
+  align-items: center;
+  padding: 0 13px;
+  background: #f7f6f2;
+  border-left: 0.5px solid #e0ded8;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: #7a786f;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.password-input-wrap {
+  position: relative;
+}
+
+.password-input-wrap input {
+  width: 100%;
+  height: 40px;
+  border: 0.5px solid #d6d4ce;
+  border-radius: 8px;
+  outline: none;
+  padding: 0 40px 0 12px;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: #1a1917;
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.password-input-wrap input::placeholder {
+  color: #c2bfb8;
+  font-style: italic;
+  font-family: 'DM Sans', sans-serif;
+}
+.password-input-wrap input:focus {
+  border-color: #9b9690;
+  box-shadow: 0 0 0 3px rgba(155,150,144,0.12);
+}
+
+.toggle-pw {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #b0ada6;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+}
+.toggle-pw:hover { color: #4a4844; }
+
+.strength-bar {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+}
+.strength-bar span {
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+  background: #e8e6e0;
+  transition: background 0.3s;
+}
+
+.match-hint {
+  font-size: 11px;
+  margin-top: 6px;
+  height: 14px;
+  transition: color 0.2s;
+}
+.match-hint.ok { color: #4a8c5c; }
+.match-hint.err { color: #c0442b; }
+
+.submit-btn {
+  width: 100%;
+  height: 42px;
+  margin-top: 24px;
+  background: #1a1917;
+  color: #f4f3ef;
+  border: none;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+.submit-btn:hover { background: #f87c00; }
+.submit-btn:active { transform: scale(0.99); }
+.submit-btn:disabled {
+  background: #d6d4ce;
+  color: #a8a69e;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cancel-btn {
+width: 100%;
+height: 42px;
+margin-top: 12px;
+background: none;
+color: #6b6963;
+border: 0.5px solid #e0ded8;
+border-radius: 8px;
+font-family: 'DM Sans', sans-serif;
+font-size: 14px;
+font-weight: 500;
+letter-spacing: 0.01em;
+cursor: pointer;
+transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+
+li {
+  margin-left: 50px;
+}
+
+.password-input-wrap input#alias {
+  padding-right: 12px;
+}
