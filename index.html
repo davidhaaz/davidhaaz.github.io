@@ -34,6 +34,23 @@
       </div>
     </div>
 
+<!-- Working on storage options for future release -->
+  <!-- 
+    <div class="field">
+      <label>How much storage do you want to assign to this mailbox?</label>
+      <div style="display: flex; align-items: center; gap: 5px;">
+      <input
+        type="text"
+        id="storage"
+        placeholder="Enter storage in GB"
+        min="1"
+        max="2560"
+        autocomplete="off"
+      />
+    </div>
+    <span style="font-size: 12px; color: #6b6963; margin-top: 4px; display: block;">You have "2,560 GB" of storage available.</span>
+    </div>
+-->
     <div class="field">
       <label for="password">Password</label>
       <div class="password-input-wrap">
@@ -83,24 +100,18 @@
           <span>Must be 12-14 characters long.</span>
         </ul>
       </ul>
-      <ul style="font-size: 12px; color: #6b6963; text-align: top; margin-left: 20px; list-style-type: disc;">
-        <ul id="req-types" style="display: flex; align-items: center; gap: 8px;">
-          <span class="req-check" style="display: none; color: #4a8c5c; font-weight: bold;">✓</span>
-          <span>Must contain at least three of the following:</span>
+      <div id="req-types-group">
+        <ul style="font-size: 12px; color: #6b6963; text-align: top; margin-left: 20px; list-style-type: disc;">
+          <ul id="req-types" style="display: flex; align-items: center; gap: 8px;">
+            <span class="req-check" style="display: none; color: #4a8c5c; font-weight: bold;">✓</span>
+            <span>Must contain at least three of the following:</span>
+          </ul>
+          <li id="req-types-upper">An uppercase letter (A-Z)</li>
+          <li id="req-types-lower">A lowercase letter (a-z)</li>
+          <li id="req-types-number">A number (0-9)</li>
+          <li id="req-types-special">A special character (!@#$%^&*)</li>
         </ul>
-        <li>
-          An uppercase letter (A-Z)
-        </li>
-        <li>
-          A lowercase letter (a-z)
-        </li>
-        <li>
-          A number (0-9)
-        </li>
-        <li>
-          A special character (!@#$%^&*)
-        </li>
-      </ul>
+      </div>
       <ul style="font-size: 12px; color: #6b6963; text-align: top; margin-left: 20px; list-style-type: disc;">
         <ul id="req-email" style="display: flex; align-items: center; gap: 8px;">
           <span class="req-check" style="display: none; color: #4a8c5c; font-weight: bold;">✓</span>
